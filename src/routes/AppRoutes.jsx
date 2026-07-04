@@ -1,7 +1,14 @@
+import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+
+const MainPage = lazy(() => import("../pages/MainPage"));
+
 export default function AppRoutes() {
   return (
     <>
-      <h1 class="text-2xl font-bold text-center mt-4">Belajar React</h1>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
     </>
   )
 }
